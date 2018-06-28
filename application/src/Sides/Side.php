@@ -12,6 +12,10 @@ class Side
 {
     private $length;
 
+    /**
+     * @param $length
+     * @return int
+     */
     public function setLength($length)
     {
         return $this->length = intval($length);

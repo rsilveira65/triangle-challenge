@@ -1,6 +1,7 @@
 <?php
 
 namespace src\Triangle;
+use src\Helper\CommandLineError;
 use src\Sides\Side;
 
 /**
@@ -49,8 +50,12 @@ class Triangle
             $lengths[] = $side->getLength();
         }
 
-        if (count($lengths) < 3) {
-            //TODO
+        if (count($lengths) != 3) {
+            throw new \Error('Error, number of sides must be 3.', CommandLineError::FATAL_ERROR);
+        }
+
+        if (array_search(0, $lengths) !== false) {
+            throw new \Error('Error, side can not be 0.', CommandLineError::FATAL_ERROR);
         }
 
         $result = array_count_values($lengths);
