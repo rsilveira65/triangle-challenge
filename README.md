@@ -34,6 +34,7 @@ docker-compose run application php triangle-challenge.php run:calculate --sideA=
 In the first moment, docker will download and install the base PHP7 image and all necessary libs and extensions to run the project properly. After that, the calculate command must be executed.
 
 - Eg: Output result table.
+
 ![alt tag](https://i.imgur.com/RjvFC2w.png)
 
 ## Unit Tests
