@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.com/rsilveira65/triangle-challenge.svg?token=z2yf7ZpVZudwz9Cxdor9&branch=master)](https://travis-ci.com/rsilveira65/triangle-challenge)# triangle-challenge
+[![Build Status](https://travis-ci.com/rsilveira65/triangle-challenge.svg?token=z2yf7ZpVZudwz9Cxdor9&branch=master)](https://travis-ci.com/rsilveira65/triangle-challenge)
+
+# triangle-challenge
 
 ## Goal
 
