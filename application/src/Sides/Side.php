@@ -3,10 +3,8 @@
 namespace src\Sides;
 
 /**
- * Created by PhpStorm.
- * User: rsilveira
- * Date: 28/06/18
- * Time: 10:27
+ * Class Side
+ * @package src\Sides
  */
 class Side
 {

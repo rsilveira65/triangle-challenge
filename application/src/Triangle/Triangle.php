@@ -1,20 +1,40 @@
 <?php
 
 namespace src\Triangle;
+
 use src\Helper\CommandLineError;
 use src\Sides\Side;
 
 /**
- * Created by PhpStorm.
- * User: rsilveira
- * Date: 28/06/18
- * Time: 10:28
+ * Class Triangle
+ * @package src\Triangle
  */
 class Triangle
 {
+    /**
+     * Equilateral Triangle
+     * Three equal sides
+     * Three equal angles, always 60°
+     */
     const EQUILATERAL = 3;
+
+    /**
+     * Isosceles Triangle
+     * Two equal sides
+     * Two equal angles
+     */
     const ISOSCELES = 2;
+
+    /**
+     * Scalene Triangle
+     * No equal sides
+     * No equal angles
+     */
     const SCALENE = 0;
+
+    /**
+     * @var string $type
+     */
     private $type;
 
     /**
@@ -40,7 +60,7 @@ class Triangle
     }
 
     /**
-     * TODO
+     * This method calculates the triangle type according with the given sides.
      */
     public function calculateType()
     {
@@ -58,14 +78,14 @@ class Triangle
             throw new \Error('Error, side can not be 0.', CommandLineError::FATAL_ERROR);
         }
 
-        $result = array_count_values($lengths);
+        $sameLengthAmount = array_count_values($lengths);
 
-        if (array_search(self::EQUILATERAL, $result)) {
+        if (array_search(self::EQUILATERAL, $sameLengthAmount)) {
             $this->setType('equilateral');
             return;
         }
 
-        if (array_search(self::ISOSCELES, $result)) {
+        if (array_search(self::ISOSCELES, $sameLengthAmount)) {
             $this->setType('isosceles');
             return;
         }

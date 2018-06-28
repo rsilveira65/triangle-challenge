@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: rsilveira
- * Date: 28/06/18
- * Time: 13:19
- */
 
 namespace tests\Triangle;
 
@@ -12,6 +6,10 @@ use PHPUnit\Framework\TestCase;
 use src\Triangle\Triangle;
 use src\Triangle\TriangleBuilder;
 
+/**
+ * Class TriangleTest
+ * @package test\Triangle
+ */
 class TriangleTest extends TestCase
 {
     const EQUILATERAL = [20, 20, 20];

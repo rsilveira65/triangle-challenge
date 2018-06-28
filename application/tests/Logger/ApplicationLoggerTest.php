@@ -1,9 +1,14 @@
 <?php
+
 namespace Logger\Test;
 
 use PHPUnit\Framework\TestCase;
 use src\Logger\ApplicationLogger;
 
+/**
+ * Class ApplicationLoggerTest
+ * @package test\Logger
+ */
 class ApplicationLoggerTest extends TestCase
 {
     public function testLog()

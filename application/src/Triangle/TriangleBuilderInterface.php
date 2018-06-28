@@ -1,13 +1,11 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: rsilveira
- * Date: 28/06/18
- * Time: 10:26
- */
 namespace src\Triangle;
 
+/**
+ * Interface TriangleBuilderInterface
+ * @package src\Triangle
+ */
 interface TriangleBuilderInterface
 {
     public function createTriangle();

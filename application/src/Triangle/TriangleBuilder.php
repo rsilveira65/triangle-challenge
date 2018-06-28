@@ -6,6 +6,10 @@ use src\Helper\CommandLineError;
 use src\Sides\Side;
 use src\Triangle\Triangle;
 
+/**
+ * Class TriangleBuilder
+ * @package src\Triangle
+ */
 class TriangleBuilder implements TriangleBuilderInterface
 {
     /**
@@ -13,6 +17,10 @@ class TriangleBuilder implements TriangleBuilderInterface
      */
     private $triangle;
 
+    /**
+     * @param $sides
+     * @throws \Error
+     */
     public function addSides($sides)
     {
         if (count($sides) != 3) {

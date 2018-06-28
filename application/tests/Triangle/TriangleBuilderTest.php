@@ -1,10 +1,15 @@
 <?php
+
 namespace tests\Triangle;
 
 use PHPUnit\Framework\TestCase;
 use src\Triangle\Triangle;
 use src\Triangle\TriangleBuilder;
 
+/**
+ * Class TriangleBuilderTest
+ * @package test\Triangle
+ */
 class TriangleBuilderTest extends TestCase
 {
     public function testCanBuildTriangle()

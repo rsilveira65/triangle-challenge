@@ -1,9 +1,14 @@
 <?php
+
 namespace Helper\Test;
 
 use PHPUnit\Framework\TestCase;
 use src\Helper\CommandLineError;
 
+/**
+ * Class CommandLineErrorHelperTest
+ * @package test\Helper
+ */
 class CommandLineErrorHelperTest extends TestCase
 {
     public function testCommandErrorHelperConstants()

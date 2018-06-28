@@ -1,4 +1,5 @@
 <?php
+
 namespace src\Logger;
 
 use Monolog\Logger;

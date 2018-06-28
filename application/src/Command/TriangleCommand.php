@@ -23,10 +23,11 @@ class TriangleCommand extends Command
     {
         $this
             ->setName('run:calculate')
-            ->addOption('sideA', null, InputOption::VALUE_REQUIRED)
-            ->addOption('sideB', null, InputOption::VALUE_REQUIRED)
-            ->addOption('sideC', null, InputOption::VALUE_REQUIRED);
+            ->addOption('sideA', 'sideA', InputOption::VALUE_REQUIRED)
+            ->addOption('sideB', 'sideB', InputOption::VALUE_REQUIRED)
+            ->addOption('sideC', 'sideC', InputOption::VALUE_REQUIRED);
     }
+
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
@@ -50,10 +51,7 @@ class TriangleCommand extends Command
 
             $triangle->calculateType();
 
-            $tableSerializer = new TableSerializer(
-                $triangle,
-                new Table($output)
-            );
+            $tableSerializer = new TableSerializer($triangle, new Table($output));
 
             $tableSerializer->serialize();
 
@@ -63,6 +61,7 @@ class TriangleCommand extends Command
             $output->writeln($e->getMessage());
         }
     }
+
     /**
      * @param $parameter
      * @return mixed
@@ -70,9 +69,10 @@ class TriangleCommand extends Command
      */
     protected function validateParameters($parameter)
     {
-        if (empty($parameter)) {
+        if (empty($parameter) or $parameter == 0) {
             throw new \Exception('Please add a valid argument.', CommandLineError::INVALID_ARGUMENT);
         }
+
         return $parameter;
     }
 }
